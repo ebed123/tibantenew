@@ -1,0 +1,651 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+nav {
+    background-color: #579C62;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.navbar-brand {
+    font-size: large;
+    padding-left: 3rem;
+}
+
+.navbar-nav {
+    font-size: large;
+    position: relative;
+}
+
+.nav-item {
+    line-height: 7px;
+    margin-right: 0.85rem;
+    cursor: pointer;
+}
+
+.navbar li a {
+    color: white;
+}
+
+.navbar li a:hover {
+    color: black;
+}
+
+main {
+    padding: 20px 20px 0px 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.intro {
+    text-align: center;
+    margin-top: 4em;
+}
+
+.intro h1 {
+    color: #579C62;
+    margin-bottom: 1rem;
+}
+
+.introkuliner {
+    margin: 0 auto;
+    width: 35%;
+    margin-bottom: 20px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.dishes h2 {
+    color: #579C62;
+    margin-bottom: 0.5rem;
+    margin-top: -100px;
+    text-align: center;
+}
+
+.dishes article {
+    background: #BAE0AD;
+    text-align: justify;
+    color: black;
+    padding: 30px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.flex-normal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.dish-img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+.flex-normal > div {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.dish-description {
+    flex: 1;
+    margin-right: 20px;
+    max-width: 50%; 
+}
+
+.faq {
+    background-color: #E7F4E4;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.faq h2 {
+    color: #579C62;
+    margin-bottom: 1rem;
+}
+
+.faq article {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.faq article h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.faq article p {
+    color: #666;
+}
+
+.faq .info-box {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+.faq .info-box h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.faq .info-box p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.umkm {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.produk {
+    padding: 1rem;
+}
+
+.card-menu {
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    background-color: #BAE0AD !important;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.menu-img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 16px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.menu-title {
+    margin-top: 12px;
+}
+
+.button {
+    color: white;
+    background-color: #FF9900;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px auto 0 auto;
+}
+
+.button:hover {
+    background-color: #e68a00;
+}
+
+footer {
+    background-color: #579C62;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo img {
+    height: 60px;
+    margin-bottom: 10px;
+    margin-left: 55px;
+}
+
+.footer-logo p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.footer-menu, .footer-contact {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.footer-menu h3, .footer-contact h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-menu ul, .footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li, .footer-contact li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-menu a, .footer-contact a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-menu a:hover, .footer-contact a:hover {
+    color: black;
+}
+
+.footer-contact {
+    margin-left: 40px; 
+}
+
+body .komentar {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.komentar .container {
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.komentar h1, .komentar h2 {
+    text-align: center;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.komentar form {
+    background: #f4f4f4;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.komentar .form-group {
+    margin-bottom: 20px;
+}
+
+.komentar .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.komentar .form-group input,
+.komentar .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.komentar .form-group input:focus,
+.komentar .form-group textarea:focus {
+    border-color: #579C62;
+    outline: none;
+}
+
+.komentar button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #579C62;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.komentar button:hover {
+    background: #467a50;
+}
+
+.komentar #message {
+    text-align: center;
+    margin-bottom: 20px;
+    color: green;
+    font-weight: 600;
+}
+
+.komentar #comments {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.komentar .comment {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.komentar .comment p {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.komentar .comment .author {
+    font-weight: 600;
+    color: #555;
+}
+
+.komentar .comment .date {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 850px) {
+    .intro {
+        margin-top: 2em;
+    }
+
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+
+    .introkuliner {
+        width: 80%;
+        height: auto;
+    }
+
+    .dishes {
+        margin: 0;
+    }
+
+    .dishes h2 {
+        margin-top: 0;
+    }
+
+    .dish-img {
+        width: 100%;
+    }
+
+    .dish-description {
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .dish-description h2 {
+        margin-top: 0.5em; /* Jika diperlukan, sesuaikan margin-top di sini */
+    }
+
+    .faq {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .faq article,
+    .faq .info-box {
+        max-width: 100%;
+    }
+
+    footer {
+        background-color: #579C62;
+        color: black;
+        padding: 2rem 1rem;
+        
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .footer-logo img {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-logo p {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-left: -40px;
+    }
+    
+    .footer-menu, .footer-contact {
+        display: flex;
+        flex-direction: column;
+        margin-right: 40px;
+    }
+    
+    .footer-menu h3, .footer-contact h3 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .footer-menu ul, .footer-contact ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .footer-menu li, .footer-contact li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-menu a, .footer-contact a {
+        color: black;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .footer-menu a:hover, .footer-contact a:hover {
+        color: #e0e0e0;
+    }
+    
+    .footer-contact {
+        margin-left: 40px; 
+    }
+    
+
+    .komentar .container {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-brand {
+        padding-left: 1rem;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    main {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .intro {
+        margin-top: 2em;
+    }
+
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+
+    .introkuliner {
+        width: 80%;
+        height: auto;
+    }
+
+    .dishes {
+        margin: 0;
+    }
+
+    .dishes h2 {
+        margin-top: 0;
+    }
+
+    .dish-img {
+        width: 100%;
+    }
+
+    .dish-description {
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .faq {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .faq article, .faq .info-box {
+        max-width: 100%;
+    }
+
+    footer .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo, .footer-menu, .footer-contact {
+        margin-right: 0;
+    }
+
+    .footer-logo img {
+        height: 40px;
+        margin-left: 4.7em;
+    }
+
+    .footer-menu{
+        padding-top: 5px;
+        margin-left: 40px;
+    }
+
+    .footer-logo p {
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+
+    .komentar .container {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+/* Media Queries for Very Small Screens */
+@media (max-width: 576px) {
+    .navbar-brand {
+        padding-left: 1rem;
+    }
+
+    .nav-item {
+        margin-right: 0.5rem;
+        text-align: left;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .intro h1 {
+        font-size: 1.2rem;
+        margin-top: 70px;
+    }
+
+    .introkuliner {
+        width: 90%;
+    }
+
+    .faq {
+        padding: 1rem;
+        margin: 10px;
+    }
+
+    .footer-container {
+        padding: 0 10px;
+    }
+
+    /* Ensure text within <p> elements occupies full width */
+    p {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        word-wrap: break-word;
+    }
+
+    .komentar .container {
+        width: 100%;
+        padding: 10px;
+    }
+}

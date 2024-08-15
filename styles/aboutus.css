@@ -1,0 +1,334 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #579C62;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.navbar-brand {
+    font-size: x-large;
+    padding-left: 3rem;
+}
+
+.navbar-nav {
+    font-size: large;
+}
+
+.nav-item {
+    line-height: 7px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.navbar li a {
+    color: white;
+}
+
+.navbar li a:hover {
+    color: black;
+}
+
+main {
+    padding: 80px 20px 20px;
+}
+
+.about-us {
+    text-align: center;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.about-us .intro {
+    background-color: #e0f7e9;
+    padding: 20px;
+    border: 2px solid #579C62;
+    border-radius: 10px;
+    text-align: justify;
+    flex: 2;
+}
+
+.about-us .intro p {
+    margin: 0;
+}
+
+.about-us .logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    flex: 1;
+}
+
+.about-us .logo-section img {
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.about-us .logo-section h2 {
+    margin: 0;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-left: 100px;
+}
+
+.team h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.team .member {
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 570px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.team .member .photo {
+    margin-right: 10px;
+}
+
+.team .member .photo img {
+    width: 250px;
+    height: auto;
+    border-radius: 5%;
+}
+
+.team .member .photoyoga img {
+    width: 260px;
+    height: 300px;
+}
+
+.team .member .info {
+    text-align: left;
+}
+
+.team .member .info p {
+    margin: 5px 0;
+    font-size: large;
+    margin-left: 15px;
+}
+
+.team .member button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100px;
+    margin-top: 15px;
+    margin-left: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #579C62;
+    color: white;
+    padding: 2rem 1rem;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: -40px;
+}
+
+.footer-menu, .footer-contact {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.footer-menu h3, .footer-contact h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-menu ul, .footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li, .footer-contact li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-menu a, .footer-contact a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-menu a:hover, .footer-contact a:hover {
+    color: black;
+}
+
+.footer-contact {
+    margin-left: 40px; 
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .team {
+        margin-left: 50px;
+    }
+    .team .member {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-us .intro {
+        flex: none;
+        width: 100%;
+    }
+    .about-us .logo-section {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .team {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        padding-left: 1rem;
+    }
+    .nav-item {
+        margin-right: 0.5rem;
+    }
+    main {
+        padding: 60px 10px 10px;
+    }
+    .team {
+        margin-left: 10px;
+        align-items: center;
+    }
+    .team .member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .team .member .info {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .team .member button {
+        margin-left: 0;
+    }
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .footer-contact,
+    footer .footer-nav {
+        padding-left: 0;
+        text-align: center;
+    }
+    footer .footer-logo p {
+        padding-left: 0;
+    }
+    footer .footer-content {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+    }
+
+    .footer-container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        margin-left: 4em;
+    }
+
+    .footer-logo p{
+        margin-left: 25px;
+    }
+
+    .footer-menu{
+        margin-left: 45px;
+    }
+
+    .footer-menu h3{
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: large;
+    }
+    .nav-item {
+        font-size: medium;
+    }
+    .team .member .photo img {
+        width: 200px;
+    }
+    .team .member .photoyoga img {
+        width: 220px;
+        height: 260px;
+    }
+
+    footer .footer-content {
+        padding: 0 10px; 
+    }
+
+    .footer-logo img {
+        height: 40px; 
+    }
+
+    .footer-logo p {
+        font-size: 1rem; 
+    }
+
+    .footer-container {
+        align-items: center;
+    }
+}

@@ -1,0 +1,262 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 0 15px; /* Added padding for smaller screens */
+}
+
+.desa-wisata {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.desa-wisata h2 {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.desa-wisata p {
+    color: #555;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.desa-wisata img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.desa-wisata strong {
+    font-weight: bold;
+}
+
+nav {
+    background-color: #579C62;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.navbar-brand {
+    font-size: x-large;
+    padding-left: 3rem;
+}
+
+.navbar-nav {
+    font-size: large;
+}
+
+.nav-item {
+    line-height: 7px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.navbar li a {
+    color: white;
+}
+
+.navbar li a:hover {
+    color: black;
+}
+
+footer {
+    background-color: #579C62;
+    color: white;
+    padding: 2rem 1rem;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: -40px;
+}
+
+.footer-menu, .footer-contact {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.footer-menu h3, .footer-contact h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-menu ul, .footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li, .footer-contact li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-menu a, .footer-contact a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-menu a:hover, .footer-contact a:hover {
+    color: black;
+}
+
+.footer-contact {
+    margin-left: 40px; 
+}
+
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 1200px) {
+    .container {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-brand {
+        padding-left: 1rem;
+    }
+
+    .navbar-nav {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        font-size: small;
+    }
+
+    .navbar li {
+        margin-right: 0.5rem;
+    }
+
+    .desa-wisata img {
+        max-width: 90%;
+        margin-left: 5%;
+    }
+
+    footer .footer-content {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+    }
+
+    .footer-container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        margin-left: 4em;
+    }
+
+    .footer-logo p{
+        margin-left: 25px;
+    }
+
+    .footer-menu{
+        margin-left: 45px;
+    }
+
+    .footer-menu h3{
+        padding-top: 10px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: large;
+        padding-left: 0.5rem;
+    }
+
+    .desa-wisata {
+        padding: 15px;
+    }
+
+    .desa-wisata h2 {
+        font-size: 1.5rem;
+    }
+
+    .desa-wisata p {
+        font-size: 0.9rem;
+    }
+
+    .desa-wisata img {
+        max-width: 100%;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    footer .footer-content {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center align items */
+    }
+
+    footer .footer-content div {
+        text-align: center;
+    }
+
+    footer .footer-logo,
+    footer .footer-nav,
+    footer .footer-contact {
+        padding-left: 0;
+    }
+
+    footer .footer-content {
+        padding: 0 10px; 
+    }
+
+    .footer-logo img {
+        height: 40px; 
+    }
+
+    .footer-logo p {
+        font-size: 1rem; 
+    }
+
+    .footer-container {
+        align-items: center;
+    }
+}

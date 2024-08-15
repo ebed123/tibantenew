@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Artikel</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="Icon" href="../images/icon/icon_tibante.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/detail.css">
+    <link rel="Icon" href="https://ebed123.github.io/Data_Gambar_Tibante/images/icon/icon_tibante.png">
+    <meta name="dicoding:email" content="ikramskei@gmail.com">
+    <meta name="dicoding:email" content="ferdythursyandi@gmail.com">
+    <meta name="dicoding:email" content="yogasuprayitna@gmail.com">
+</head>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">
+                <img
+                    class="img1"
+                    src="https://ebed123.github.io/Data_Gambar_Tibante/images/logo.png"
+                    alt=""
+                    width="310"
+                    height="50"
+                    class="d-inline-block align-text-center"
+                />
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a
+                            class="nav-link icon-link-hover"
+                            aria-current="page"
+                            href="./index.html"
+                            
+                            >Beranda</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./wisata.html" id="nav-dark1"
+                            >Wisata</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="./kuliner.html"
+                            id="nav-dark2"
+                            >Kuliner</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link border-bottom"
+                            href="./blog.html"
+                            id="nav-dark3"
+                            >Blog</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                        href="./aboutus.html" id="nav-dark4"
+                            >Tentang Kami</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="article-detail"></div>
+    </div>
+
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="#"><img src="https://ebed123.github.io/Data_Gambar_Tibante/images/logo.png" alt="Tibante Logo"></a>
+            </div>
+            <div class="footer-menu">
+                <h3>FITUR</h3>
+                <ul>
+                    <li><a href="./index.html">Beranda</a></li>
+                    <li><a href="./wisata.html">Wisata</a></li>
+                    <li><a href="./kuliner.html">Kuliner</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./aboutus.html">Tentang Kami</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Lokasi</h3>
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/jJ8AuhGWrmgMZMNN7" target="_blank">🏡 Bilebante, Pringgarata, Kabupaten Lombok Tengah, Nusa Tenggara Barat</a></li>
+                    <br><p style="text-align: center; margin-top: 10px; margin-bottom: 5px;">&copy; 2024 Tibante, Temukan Indahnya Bilebante. All Rights Reserved.</p>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+
+            fetch('./datablog.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const article = data.find(item => item.id == id);
+                    if (article) {
+                        displayArticle(article);
+                    } else {
+                        document.getElementById('article-detail').innerHTML = '<p>Article not found.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    document.getElementById('article-detail').innerHTML = '<p>Error loading article.</p>';
+                });
+
+            function displayArticle(article) {
+                const detailContainer = document.getElementById('article-detail');
+                detailContainer.innerHTML = `
+                    <div class="desa-wisata">
+                        <h2>${article.title}</h2>
+                        <img src="${article.image}" alt="${article.title}">
+                        <p>${article.content}</p>
+                    </div>
+                `;
+            }
+        });
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

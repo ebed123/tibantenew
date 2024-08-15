@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIBANTE</title>
+    <link rel="stylesheet" href="./styles/blog.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="Icon" href="../images/icon/icon_tibante.png">
+    <link rel="Icon" href="https://ebed123.github.io/Data_Gambar_Tibante/images/icon/icon_tibante.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">
+                <img
+                    class="img1"
+                    src="https://ebed123.github.io/Data_Gambar_Tibante/images/logo.png"
+                    alt=""
+                    width="310"
+                    height="50"
+                    class="d-inline-block align-text-center"
+                />
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link icon-link-hover" aria-current="page" href="./index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./wisata.html" id="nav-dark1">Wisata</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./kuliner.html" id="nav-dark2">Kuliner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border-bottom" href="./blog.html" id="nav-dark3">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./aboutus.html" id="nav-dark4">Tentang Kami</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="blog">
+        <h1 class="fs-4 text-center mb-3 mt-4">Blog Desa Wisata Hijau</h1>
+        <p>Informasi seputar kegiatan/event Desa Wisata Hijau Bilebante bisa Anda baca disini. Harapan kami adalah anda datang sebagai tamu dan pulang sebagai keluarga</p>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Temukan Blog...">
+            <button onclick="searchBlog()">Search</button>
+        </div>
+
+        <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+        <div class="cards-container" id="blogCards">
+            <div class="card">
+                <a href="detail.html?id=1">
+                <img src="https://ebed123.github.io/Data_Gambar_Tibante/images/aset%20blog/penghargaan.png" alt="Certificate" class="card-img"></a>
+                <div class="card-content">
+                    <h3>Perjalanan Inspiratif...</h3>
+                    <p>Desa Bilebante – Dalam perjalanan kepemimpinan Rakyatulliwauddin sebagai Local Champion Desa, Desa Bilebante telah mencatat prestasi luar biasa dengan meraih...</p>
+                    <a href="detail.html?id=1" class="read-more">Selengkapnya → </a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="detail.html?id=2">
+                <img src="https://ebed123.github.io/Data_Gambar_Tibante/images/aset%20blog/walikota.jpg" alt="Leader" class="card-img"></a>
+                <div class="card-content">
+                    <h3>Terima Kasih...</h3>
+                    <p>Rakyatulliwa’uddin, S.Pd.I Keluarga Besar Desa Wisata Hijau Bilebante mengucapkan terimakasih kepada Bapak Rakyatulliwa’uddin selama 17 tahun pengabdian sebagai kepala desa...</p>
+                    <a href="detail.html?id=2" class="read-more">Selengkapnya → </a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="detail.html?id=3">
+                <img src="https://ebed123.github.io/Data_Gambar_Tibante/images/aset%20blog/kerbau.jpg" alt="Tourism" class="card-img"></a>
+                <div class="card-content">
+                    <h3>Kelestarian Lokal...</h3>
+                    <p>Desa Wisata Hijau Bilebante, sebagai destinasi pariwisata yang kaya akan keindahan alam dan kearifan lokalnya, merasakan kebahagiaan yang luar biasa...</p>
+                    <a href="detail.html?id=3" class="read-more">Selengkapnya → </a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="detail.html?id=4">
+                <img src="https://ebed123.github.io/Data_Gambar_Tibante/images/aset%20blog/event.png" alt="Tourism" class="card-img"></a>
+                <div class="card-content">
+                    <h3>Launching Event...</h3>
+                    <p>Bilebante- Pemerintah Provinsi NTB melalui Dinas Pariwisata Provinsi NTB telah resmi meluncurkan Calendar of Event (CoE) Provinsi Nusa Tenggara Barat...</p>
+                    <a href="detail.html?id=4" class="read-more">Selengkapnya → </a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="detail.html?id=5">
+                <img src="https://ebed123.github.io/Data_Gambar_Tibante/images/aset%20blog/sertifikat.png" alt="Tourism" class="card-img"></a>
+                <div class="card-content">
+                    <h3>Selamat Kepada Desa...</h3>
+                    <p>Dari 260 desa dari seluruh dunia, UNWTO memilih sebanyak 54 desa untuk menjadi salah satu Best Tourism Villages 2023, Sob...</p>
+                    <a href="detail.html?id=5" class="read-more">Selengkapnya → </a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="detail.html?id=6">
+                <img src="https://ebed123.github.io/Data_Gambar_Tibante/images/aset%20blog/pejabat.png" alt="Tourism" class="card-img"></a>
+                <div class="card-content">
+                    <h3>Rapat Persiapan...</h3>
+                    <p>Menindaklanjuti Radiogram dari Kepala Badan Strategi Kebijakan Dalam Negeri Kementerian Dalam Negeri Republik Indonesia Nomor: 000.10/5373/BSKDN tanggal 6 Oktober 2023...</p>
+                    <a href="detail.html?id=6" class="read-more">Selengkapnya → </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <div class="komentar">
+      <div class="container">
+        <h1>Tambahkan Komentar</h1>
+        <form id="commentForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" required></textarea>
+          </div>
+          <button type="submit">Kirim</button>
+        </form>
+        <div id="message"></div>
+        <h2>Komentar</h2>
+        <div id="comments"></div>
+      </div>
+    </div>
+    <br>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="#"><img src="https://ebed123.github.io/Data_Gambar_Tibante/images/logo.png" alt="Tibante Logo"></a>
+            </div>
+            <div class="footer-menu">
+                <h3>FITUR</h3>
+                <ul>
+                    <li><a href="./index.html">Beranda</a></li>
+                    <li><a href="./wisata.html">Wisata</a></li>
+                    <li><a href="./kuliner.html">Kuliner</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="./aboutus.html">Tentang Kami</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Lokasi</h3>
+                <ul>
+                    <li><a href="#">🏡 Bilebante, Pringgarata, Kabupaten Lombok Tengah, Nusa Tenggara Barat</a></li>
+                    <br><p style="text-align: center; margin-top: 10px; margin-bottom: 5px;">&copy; 2024 Tibante, Temukan Indahnya Bilebante. All Rights Reserved.</p>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="./loading.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

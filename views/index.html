@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="Icon" href="https://ebed123.github.io/Data_Gambar_Tibante/images/icon/icon_tibante.png">
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-c3f8mEGXjWSI0Dow"></script>
+</head>
+<body class="">
+    
+    <nav>
+        <div class="logo">
+          <img src="https://ebed123.github.io/Data_Gambar_Tibante/images/logo%20tibante2.png" alt="my-avatar" />
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="nav-links">
+          <li><a href="/templates/index.html">Beranda</a></li>
+          <li><a class="border-bottom" href="/templates/wisata.html">Wisata</a></li>
+          <li><a href="/templates/kuliner.html">Kuliner</a></li>
+          <li><a href="/templates/blog.html">Blog</a></li>
+          <li><a href="/templates/aboutus.html">Tentang Kami</a></li>
+        </ul>
+      </nav>
+
+    <div class="container mt-5">
+        <!-- Content -->
+        <header>
+            <h1>Destinasi Wisata</h1>
+            <div class="shopping">
+                <img src="shopping.svg">
+                <span class="quantity">0</span>
+            </div>
+        </header>
+
+        <div class="list">
+          
+        </div>
+        <h1 style="text-align: center; margin-top: 30px;">Masukkan Data Pembayaran</h1>
+        <form id="payment-form">
+            <label for="grossAmount">Total Harga</label>
+            <input type="text" id="grossAmount" name="grossAmount" required readonly><br><br>
+            
+            <label for="firstName">Nama</label>
+            <input type="text" id="firstName" name="firstName" required><br><br>
+            
+            <label for="visitDate">Tanggal Kunjungan</label>
+            <input type="date" id="visitDate" name="visitDate" required><br><br>
+            <span id="dateMessage" style="color:red; display: block; margin-top: 5px;"></span>
+            
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">No. Telepon</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+    
+            <label for="paket">Paket</label>
+            <textarea id="paket" name="paket" rows="4" readonly required></textarea><br><br>
+            
+            <button id="pay-button" type="button">Bayar!</button>
+        </form>
+    </div>
+    <!-- End Container -->
+
+    <!-- Card -->
+    <div class="card">
+        <h1>Pesanan</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Tutup</div>
+        </div>
+    </div>
+    <!-- End Card -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="#"><img src="https://ebed123.github.io/Data_Gambar_Tibante/images/logo%20tibante2.png" alt="Tibante Logo"></a>
+            </div>
+            <div class="footer-menu">
+                <h3>FITUR</h3>
+                <ul>
+                    <li><a href="/templates/index.html">Beranda</a></li>
+                    <li><a href="/templates/wisata.html">Wisata</a></li>
+                    <li><a href="/templates/kuliner.html">Kuliner</a></li>
+                    <li><a href="/templates/blog.html">Blog</a></li>
+                    <li><a href="/templates/aboutus.html">Tentang Kami</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Lokasi</h3>
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/jJ8AuhGWrmgMZMNN7" target="_blank">🏡 Bilebante, Pringgarata, Kabupaten Lombok Tengah, Nusa Tenggara Barat</a></li>
+                    <br><p style="text-align: center; margin-top: 10px; margin-bottom: 5px;">&copy; 2024 Tibante, Temukan Indahnya Bilebante. All Rights Reserved.</p>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script type="text/javascript">
+        document.getElementById('pay-button').addEventListener('click', function (event) {
+            event.preventDefault();
+    
+            const grossAmount = document.getElementById('grossAmount').value;
+            const firstName = document.getElementById('firstName').value;
+            const visitDate = document.getElementById('visitDate').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const paket = document.getElementById('paket').value;
+    
+            fetch('http://localhost:3001/bayar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    grossAmount,
+                    firstName,
+                    visitDate,
+                    email,
+                    phone,
+                    paket
+                }),
+            }).then((response) => response.json())
+            .then((data) => {
+                const transactionToken = data.transactionToken;
+                if (transactionToken) {
+                    window.snap.pay(transactionToken, {
+                        onSuccess: function(result){
+                            window.location.href = "http://localhost:3000/wisata.html";
+                        },
+                        onPending: function(result){
+                            console.log('Pending payment:', result);
+                        },
+                        onError: function(result){
+                            console.log('Payment error:', result);
+                        },
+                        onClose: function(){
+                            console.log('Payment popup closed');
+                        }
+                    });
+                } else {
+                    console.error('Failed to get transaction token');
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+    
+    <script src="form.js"></script>
+</body>
+</html>
