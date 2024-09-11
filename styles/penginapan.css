@@ -240,3 +240,89 @@ footer {
 .footer-contact {
     margin-left: 40px; 
 }
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-menu, .footer-contact {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .faq {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        font-size: large;
+        padding-left: 1rem;
+    }
+
+    .navbar-nav {
+        font-size: medium;
+    }
+
+    .faq h2 {
+        font-size: 1.5rem;
+    }
+
+    .faq article h3 {
+        font-size: 1.25rem;
+    }
+
+    .faq article p {
+        font-size: 1rem;
+    }
+
+    .faq .info-box h3 {
+        font-size: 1.25rem;
+    }
+
+    .faq .info-box p {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+    .footer-container {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .footer-logo img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar-brand {
+        font-size: medium;
+        padding-left: 0.5rem;
+    }
+
+    .faq {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    main img {
+        width: 100%;
+    }
+}
