@@ -83,7 +83,6 @@ nav {
 }
 
 
-
 main{
     display: flex;
     flex-direction: column;
@@ -91,18 +90,13 @@ main{
 }
 
 main img{
-    width: 600px;
+    width: 400px;
+    height: 350px;
     border-radius: 10px;
 }
 
 .img{
     text-align: center;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
 }
 
 .container{
@@ -111,72 +105,15 @@ main img{
     width: 1200px;
     align-self: center;
     border-radius: 10px;
+    text-align: center;
 
 }
 .container p{
-    text-align: justify;
+    text-align: center;
     font-size: 15px;
 }
-#profile {
-    padding: 20px;
-    background-color: #f5f5f5;
-    text-align: center;
-}
 
-.profile-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #BAE0AD;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 1000px;
-    margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.profile-image {
-    flex: 1;
-}
-
-.profile-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.profile-text {
-    flex: 1;
-    margin-left: 20px;
-}
-.profile-text h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-.profile-text p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 0;
-    text-align: justify;
-}
-
-.profile-text2 {
-    flex: 1;
-    margin-right: 20px; 
-}
-.profile-text2 h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-.profile-text2 p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 0;
-    text-align: justify;
-}
-
-
-
+/*-------*/
 .faq {
     background-color: #E7F4E4;
     padding: 2rem;
@@ -192,7 +129,7 @@ main img{
 .faq h2 {
     color: #579C62;
     margin-bottom: 1rem;
-    font-size: 2rem; 
+    font-size: 2rem; /* Increased font size */
 }
 
 .faq article {
@@ -206,12 +143,12 @@ main img{
 .faq article h3 {
     color: #333;
     margin-bottom: 0.5rem;
-    font-size: 1.5rem; 
+    font-size: 1.5rem; /* Increased font size */
 }
 
 .faq article p {
     color: #666;
-    font-size: 1.125rem; 
+    font-size: 1.125rem; /* Increased font size */
 }
 
 .faq .info-box {
@@ -233,7 +170,8 @@ main img{
     margin-bottom: 1rem;
     font-size: 1.125rem; /* Increased font size */
 }
-
+/* ============================================ */
+/* ============================================ */
 footer {
     background-color: #579C62;
     color: white;
@@ -257,6 +195,7 @@ footer {
 
 .footer-logo img {
     height: 60px;
+    width: 350px;
     margin-bottom: 10px;
 }
 
@@ -301,4 +240,3 @@ footer {
 .footer-contact {
     margin-left: 40px; 
 }
-

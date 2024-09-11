@@ -190,7 +190,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const phoneInput = document.getElementById('phone');
-    
     phoneInput.addEventListener('focus', function() {
         if (!phoneInput.value.startsWith('+62')) {
             phoneInput.value = '+62';
@@ -200,6 +199,12 @@ document.addEventListener('DOMContentLoaded', function() {
     phoneInput.addEventListener('input', function() {
         if (!phoneInput.value.startsWith('+62')) {
             phoneInput.value = '+62' + phoneInput.value.replace(/^(\+62)/, '');
+        }
+
+        phoneInput.value = phoneInput.value.replace(/[^\d+]/g, '');
+
+        if (phoneInput.value.length > 3) {
+            phoneInput.value = phoneInput.value.slice(0, 3) + phoneInput.value.slice(3).replace(/\D/g, '');
         }
     });
 });

@@ -33,6 +33,57 @@ nav {
     color: black;
 }
 
+/* Mengubah gaya dropdown */
+.navbar-nav .dropdown-menu {
+    background-color: #f8f9fa; /* Warna latar belakang dropdown */
+    border-radius: 10px; /* Membuat sudut melengkung */
+    box-shadow: 0 4px 8px #579C62; /* Memberi efek bayangan */
+    border: none;
+}
+
+/* Mengubah warna item di dalam dropdown */
+.navbar-nav .dropdown-item {
+    color: black; /* Warna teks */
+    padding: 10px 20px; /* Ruang di dalam item */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efek hover pada item dropdown */
+.navbar-nav .dropdown-item:hover {
+    background-color: #579C62; /* Warna latar belakang saat hover */
+    color: #fff; /* Warna teks saat hover */
+}
+
+/* Gaya dropdown link utama */
+.navbar-nav .dropdown-toggle {
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .dropdown-toggle:hover {
+    color: black; /* Warna saat hover di link Wisata */
+}
+
+/* Efek fade-in pada dropdown */
+.navbar-nav .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.navbar-nav .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mengatur jarak dropdown */
+.navbar-nav .dropdown-menu {
+    margin-top: 10px;
+}
+
+
+
 main{
     display: flex;
     flex-direction: column;
