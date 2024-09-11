@@ -1,3 +1,4 @@
+/* Gaya dasar */
 body {
     background-color: #E3E7E8;
     font-family: system-ui;
@@ -43,22 +44,64 @@ nav .nav-links li a:hover {
     border-bottom: 1px solid black;
 }
 
+/* Dropdown menu */
+nav .dropdown {
+    position: relative;
+}
+
+nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+nav .dropdown-menu li {
+    padding: 5px 10px;
+}
+
+nav .dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav .dropdown-menu li a:hover {
+    background-color: #579C62;
+    color: white;
+}
+
+/* Menampilkan dropdown saat hover */
+nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hamburger untuk mobile */
 nav .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     position: absolute;
-    right: 2rem;
+    right: 1rem;
     top: 1rem;
 }
 
 nav .hamburger span {
-    width: 25px;
+    width: 15px;
     height: 3px;
     background-color: white;
     margin: 4px;
     transition: all 0.3s ease;
 }
+
 
 #menu-toggle {
     display: none;
